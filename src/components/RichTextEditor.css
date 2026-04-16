@@ -1,0 +1,49 @@
+.rich-text-editor {
+    --ck-border-radius: 8px;
+    --ck-color-base-border: #e2e8f0;
+    --ck-color-base-background: #ffffff;
+    --ck-color-focus-border: var(--accent);
+    --ck-color-shadow-inner: rgba(0, 0, 0, 0.05);
+    --ck-color-shadow-drop: rgba(0, 0, 0, 0.1);
+    --ck-color-toolbar-background: #f8fafc;
+    --ck-color-toolbar-border: #e2e8f0;
+    
+    margin-top: 0.5rem;
+}
+
+.rich-text-editor .ck-editor__editable {
+    min-height: 300px;
+    max-height: 600px;
+    padding: 0 1rem !important;
+    border-bottom-left-radius: var(--ck-border-radius) !important;
+    border-bottom-right-radius: var(--ck-border-radius) !important;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #1e293b;
+}
+
+.rich-text-editor .ck-toolbar {
+    border-top-left-radius: var(--ck-border-radius) !important;
+    border-top-right-radius: var(--ck-border-radius) !important;
+    background: var(--ck-color-toolbar-background) !important;
+    border-color: var(--ck-color-toolbar-border) !important;
+}
+
+.rich-text-editor .ck.ck-editor__main>.ck-editor__editable.ck-focused {
+    border-color: var(--ck-color-focus-border) !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Dark mode support if applicable */
+[data-theme='dark'] .rich-text-editor {
+    --ck-color-base-border: #334155;
+    --ck-color-base-background: #0f172a;
+    --ck-color-toolbar-background: #1e293b;
+    --ck-color-toolbar-border: #334155;
+    --ck-color-text: #f1f5f9;
+}
+
+[data-theme='dark'] .rich-text-editor .ck-editor__editable {
+    background-color: #0f172a !important;
+    color: #f1f5f9 !important;
+}

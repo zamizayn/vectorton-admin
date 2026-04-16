@@ -3,6 +3,8 @@ import { Plus, Send, Trash2, Mail } from 'lucide-react';
 import Modal from '../components/Modal';
 import Toast from '../components/Toast';
 import { getNewsletters, createNewsletter, sendNewsletter, deleteNewsletter } from '../api/newsletters';
+import RichTextEditor from '../components/RichTextEditor';
+
 
 const emptyForm = { subject: '', content: '' };
 
@@ -156,7 +158,11 @@ export default function Newsletters() {
             </div>
             <div className="form-group">
               <label className="form-label">Content *</label>
-              <textarea className="form-textarea" value={form.content} onChange={set('content')} required placeholder="Email body content…" style={{ minHeight: 200 }} />
+              <RichTextEditor 
+                value={form.content} 
+                onChange={(data) => setForm(f => ({ ...f, content: data }))} 
+                placeholder="Email body content…" 
+              />
             </div>
           </form>
         </Modal>

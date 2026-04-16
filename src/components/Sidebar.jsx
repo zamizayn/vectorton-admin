@@ -1,13 +1,12 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, FileText, Mail, Users, Search, ExternalLink, LogOut } from 'lucide-react';
+import { LayoutDashboard, FileText, Tag, Settings as SettingsIcon, LogOut } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 const navItems = [
   { label: 'Dashboard',   to: '/',            icon: LayoutDashboard, exact: true },
   { label: 'Blogs',       to: '/blogs',        icon: FileText },
-  { label: 'Newsletters', to: '/newsletters',  icon: Mail },
-  { label: 'Subscribers', to: '/subscribers',  icon: Users },
-  { label: 'SEO Manager', to: '/seo',          icon: Search },
+  { label: 'Categories',  to: '/categories',   icon: Tag },
+  { label: 'Site Settings', to: '/settings',   icon: SettingsIcon },
 ];
 
 export default function Sidebar() {
@@ -34,17 +33,6 @@ export default function Sidebar() {
             {label}
           </NavLink>
         ))}
-
-        <div className="nav-section-label" style={{ marginTop: 16 }}>Quick Links</div>
-        <a
-          href="http://localhost:3000"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav-link"
-        >
-          <ExternalLink size={18} />
-          View Site
-        </a>
       </nav>
 
       <div className="sidebar-footer">

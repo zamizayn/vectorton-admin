@@ -9,10 +9,10 @@
   --border:         #e5e7eb;
   --border-bright:  #d1d5db;
 
-  --accent:         #7c3aed;
-  --accent-glow:    #7c3aed30;
-  --accent-hover:   #6d28d9;
-  --accent-soft:    #f3effe;
+  --accent:         #00d2ff;
+  --accent-glow:    #00d2ff30;
+  --accent-hover:   #00b8e6;
+  --accent-soft:    #00d2ff15;
 
   --success:        #059669;
   --success-soft:   #ecfdf5;
@@ -22,6 +22,9 @@
   --warning-soft:   #fffbeb;
   --info:           #2563eb;
   --info-soft:      #eff6ff;
+  --secondary:      #00d2ff;
+  --secondary-soft: #00d2ff15;
+
 
   --text-primary:   #111827;
   --text-secondary: #374151;
@@ -99,7 +102,8 @@ input, textarea, select { font-family: inherit; }
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  background: linear-gradient(135deg, #00d2ff, #00e5ff);
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -323,6 +327,10 @@ input, textarea, select { font-family: inherit; }
 .btn-primary { background: var(--accent); color: #fff; }
 .btn-primary:hover { background: var(--accent-hover); box-shadow: 0 4px 16px var(--accent-glow); transform: translateY(-1px); }
 
+.btn-secondary { background: var(--secondary); color: #fff; }
+.btn-secondary:hover { background: #00b8e6; box-shadow: 0 4px 16px var(--secondary-soft); transform: translateY(-1px); }
+
+
 .btn-ghost { background: transparent; color: var(--text-secondary); border: 1px solid var(--border); }
 .btn-ghost:hover { background: var(--bg-hover); color: var(--text-primary); border-color: var(--border-bright); }
 
@@ -522,7 +530,7 @@ tbody tr:hover { background: var(--bg-hover); }
 .login-logo-text {
   font-size: 22px;
   font-weight: 800;
-  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  background: linear-gradient(135deg, #00d2ff, #00e5ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -645,3 +653,110 @@ tbody tr:hover { background: var(--bg-hover); }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* ─── Image Management ─────────────────────────────────────────── */
+.table-img {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+.table-img-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.image-upload-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 200px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+/* ─── Blog Image Uploads ────────────────────────────────────────── */
+.table-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+.table-img-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: var(--bg-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.image-upload-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 200px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-hover);
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ─── Form Section Divider ─────────────────────────────────────── */
+.form-section-divider {
+  grid-column: 1 / -1;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 24px 0 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+

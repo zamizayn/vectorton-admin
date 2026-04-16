@@ -18,12 +18,6 @@ export default function Header() {
         <div className="header-title">{meta.title}</div>
         {meta.desc && <div className="header-subtitle">{meta.desc}</div>}
       </div>
-      <div className="header-actions">
-        <div className="header-badge">
-          <span className="header-badge-dot" />
-          API Connected
-        </div>
-      </div>
     </header>
   );
 }

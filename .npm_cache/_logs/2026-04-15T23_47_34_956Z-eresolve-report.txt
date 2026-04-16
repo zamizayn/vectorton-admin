@@ -1,0 +1,18 @@
+'Log files:
+/Users/shijinmsimon/iamsms/vectorton-admin/.npm_cache/_logs/2026-04-15T23_47_34_956Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: admin@0.0.0
+Found: react@19.2.5
+node_modules/react
+  react@"^19.2.4" from the root project
+
+Could not resolve dependency:
+peer react@"^16.13.1 || ^17.0.0 || ^18.0.0" from @ckeditor/ckeditor5-react@6.3.0
+node_modules/@ckeditor/ckeditor5-react
+  @ckeditor/ckeditor5-react@"^6.0.0" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.

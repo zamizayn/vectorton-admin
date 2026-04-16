@@ -25,10 +25,10 @@ export default function Dashboard() {
   }, []);
 
   const statConfig = [
-    { label: 'Total Blogs',       key: 'blogs',       icon: FileText, color: 'purple', change: 'Published blog posts' },
-    { label: 'Newsletters',       key: 'newsletters',  icon: Mail,     color: 'blue',   change: 'Email campaigns' },
-    { label: 'Subscribers',       key: 'subscribers',  icon: Users,    color: 'green',  change: 'Active email subscribers' },
-    { label: 'SEO Pages',         key: 'seo',          icon: Search,   color: 'orange', change: 'Pages with SEO config' },
+    // { label: 'Total Blogs',       key: 'blogs',       icon: FileText, color: 'purple', change: 'Published blog posts' },
+    // { label: 'Newsletters',       key: 'newsletters',  icon: Mail,     color: 'blue',   change: 'Email campaigns' },
+    // { label: 'Subscribers',       key: 'subscribers',  icon: Users,    color: 'green',  change: 'Active email subscribers' },
+    // { label: 'SEO Pages',         key: 'seo',          icon: Search,   color: 'orange', change: 'Pages with SEO config' },
   ];
 
   return (

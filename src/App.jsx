@@ -6,9 +6,12 @@ import Header from './components/Header';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Blogs from './pages/Blogs';
+import Categories from './pages/Categories';
 import Newsletters from './pages/Newsletters';
 import Subscribers from './pages/Subscribers';
 import SEO from './pages/SEO';
+import Settings from './pages/Settings';
+
 
 function AdminLayout() {
   return (
@@ -20,9 +23,11 @@ function AdminLayout() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/categories" element={<Categories />} />
             <Route path="/newsletters" element={<Newsletters />} />
             <Route path="/subscribers" element={<Subscribers />} />
             <Route path="/seo" element={<SEO />} />
+            <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
